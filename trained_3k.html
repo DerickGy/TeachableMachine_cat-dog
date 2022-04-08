@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+    <style>
+        body {
+            background-color: #c2c2c2;
+        }
+    </style>
+    <div class="container" style="text-align: center;">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">REDE 03 MIL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">12k Trained</a>
+                        <a class="nav-link" href="trained_9k.html">9k Trained</a>
+                        <a class="nav-link" href="trained_6k.html">6k Trained</a>
+                        <a class="nav-link active" href="trained_3k.html">3k Trained</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <header class="jumbotron" style="background-color: #a0afb7;">
+            <h2>UNITOLEDO - Robótica e Inteligência artificial</h2>
+            <p>Prof. João Zamperin</p>
+        </header>
+
+
+        <div id="body-container" style=" height: 320px; width: 400px; margin: 0 auto;" class="card">
+            <div id="input-container">
+                <div id="input-container-row">
+                    <button type="button" class="btn btn-primary" onclick="init()">Iniciar reconhecimento</button>
+                </div>
+                <div id="slot-container">
+                    <div id="webcam-container"></div>
+                </div>
+                <div class="section no-border">
+                    <div class="display-4" id="label-container"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="panel-footer " style="text-align:center; background-color:#a0afb7">
+        Todos os direitos Reservados - Unitoledo
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src='tensor.js'></script>
+</body>
+</html>
