@@ -12,17 +12,23 @@ var treino = "vazio"
 // 06k "https://teachablemachine.withgoogle.com/models/48v0etS1F/"
 // 03k "https://teachablemachine.withgoogle.com/models/4eAs4-78x/"
 
+//versão 2.0
+// 03k "https://teachablemachine.withgoogle.com/models/d-yZ0rVaw/"
+// 06k "https://teachablemachine.withgoogle.com/models/hiGybwaFU/"
+// 09k "https://teachablemachine.withgoogle.com/models/FBjZoj06I/"
+// 12k "https://teachablemachine.withgoogle.com/models/gd8sepgFw/"
+
 if (page == '/index.html') {
-    var treino = "https://teachablemachine.withgoogle.com/models/E1oBnHJyU/";
+    var treino = "https://teachablemachine.withgoogle.com/models/gd8sepgFw/";
 } 
 else if (page == '/trained_9k.html') {
-    var treino = "https://teachablemachine.withgoogle.com/models/p06oExTR_/";
+    var treino = "https://teachablemachine.withgoogle.com/models/FBjZoj06I/";
 } 
 else if (page == '/trained_6k.html') {
-    var treino = "https://teachablemachine.withgoogle.com/models/48v0etS1F/"
+    var treino = "https://teachablemachine.withgoogle.com/models/hiGybwaFU/";
 }
 else {
-    var treino = "https://teachablemachine.withgoogle.com/models/4eAs4-78x/";
+    var treino = "https://teachablemachine.withgoogle.com/models/d-yZ0rVaw/";
 } 
 
 const URL = treino;
@@ -69,8 +75,6 @@ async function predict() {
     for (let i = 0; i < maxPredictions; i++) {
         // filtrando para aparecer apenas o objeto desejado caso a probabilidade de previsão for maior que 85%
         if (prediction[i].probability > 0.85) {
-
-
 
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
